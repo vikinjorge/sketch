@@ -2,14 +2,12 @@
 
 body{
 	background-color: #b50707;
-	border: solid 1px black;
 	margin: auto;
 	text-align: center;
 	
 }
 #main
 {
-	border: solid 1px black;
 	position: relative;
 	text-align: center;
 	width: 1000px;
@@ -22,12 +20,11 @@ body{
 
 
 #container {
-	border: solid 1px black;
 	width: 400px;
 	position: absolute;
   	line-height: 0em;
 	background-color: white;
-	left: 299px;
+	left: 300px;
 	
 
 }
@@ -51,6 +48,6 @@ body{
 
 .boton{
 	width: 100px;
-	height: 55px;
-	
+	height: 35px;
+
 }

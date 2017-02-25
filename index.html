@@ -3,20 +3,25 @@
 	<head> 
 	<link rel="stylesheet" href="css/stylesheet.css" type="text/css"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 	<script type="text/javascript" src=js/motor.js></script>
 
 	</head>
 	<body>
-	<form>
-		<input type="checkbox" name="multicolor" value="multicolor" id="esMulticolor"/>Mulicolor?
-		<input type="button" name="reset" value="reset" id="botonReset" />
-	</form>
-	<div id="container">
-	
+	<div id="main">
+			
+
+			<form>
+			<input  class="boton" type="button" name="multicolor" value="Multicolor" id="botonMColor"/>
+			<input class="boton" type="button" name="reset" value="reset" id="botonReset" />
+
+			<div id="etiMulti">ON</div>
+
+			</form>
+			<div id="container"></div>
+
 
 	</div>
-
-
-	
 	</body>
 </html>

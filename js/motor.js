@@ -40,7 +40,7 @@ $(document).ready(function()
 	};
 	
 
-$('#esMultiColor').prop("checked",true);
+
 
 var numCuadros = prompt("Introduce el tamaño de cuadricula min 4 y max 64");
 compruebaCuadricula();
@@ -53,12 +53,13 @@ var multiColor = true;
 var r = 0;
 var g = 0;
 var b = 0;
+
 calculaCuadricula();
 
 
 $('body').on('mouseenter', '.celda',function()
 {
-	console.log("has pasado");
+	
 
 	if (multiColor)
 	{
@@ -68,7 +69,7 @@ $('body').on('mouseenter', '.celda',function()
 	else
 	{
 		$(this).css("background-color", "rgb(0,0,0");
-		console.log(multiColor);
+		
 	}
 });
 
@@ -79,26 +80,38 @@ $('body').on('mouseenter', '.celda',function()
 
 $('#botonReset').click(function()
 {
+$('#container').effect("shake");
+
 		$('#container').empty();
-		
-
-			if ($('#esMultiColor').is(":checked"))
-			{
-				multiColor=true;
-				console.log("ha entrado en True");
-			}
-			else
-			{
-				multiColor=false;
-				console.log("ha entrado en false");
-			}
-
 		numCuadros=0;
 		cuadricula = 400;
 		ancho = 0;
 		compruebaCuadricula();
 		calculaCuadricula();
-		console.log("multiColor vale"+multiColor);
+		
+
+});
+
+
+
+$('#botonMColor').click(function()
+{
+	
+		if (multiColor)
+		{
+			multiColor=false;
+			$('#etiMulti').text("OFF");
+			$('#etiMulti').css("color","red");
+			$('#etiMulti').css("background-color","white");
+		}
+		else
+		{
+			multiColor=true;
+			$('#etiMulti').text("ON");
+			$('#etiMulti').css("color","green");
+			$('#etiMulti').css("background-color","white");
+
+		}
 });
 
 
